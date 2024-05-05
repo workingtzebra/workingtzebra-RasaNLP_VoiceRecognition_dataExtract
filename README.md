@@ -21,7 +21,7 @@ Use the training data in the `data/` directory to train the model:
 
 To train the model, run:
 ```bash
-rasa train
+rasa train nlu
 ```
 
 ## Running the Application
@@ -35,3 +35,13 @@ In `jsonF.py`, enter a base file name for the audio file to process. The script 
 ## Additional Files
 - `actions.py`: Custom actions executed by Rasa in response to user inputs.
 - `endpoints.yml`: Configures endpoints for model storage, custom actions, and event brokers.
+
+## Running `jsonF.py`
+The `jsonF.py` script is the main entry point of the application:
+1. Ensure the Rasa server and action server are running as mentioned previously.
+2. Run the script:
+   ```bash
+   python jsonF.py
+   ```
+3. You will be prompted to enter the base file name of an audio file (without extension). The script expects a `.wav` file with the given name to exist in the same directory.
+4. The script processes the audio file to transcribe the speech to text, sends this text to Rasa NLU, and saves the extracted data into a CSV file named `travel_data.csv`.

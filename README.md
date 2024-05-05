@@ -2,6 +2,8 @@
 # Project Overview
 This project utilizes Rasa for natural language understanding and speech recognition to extract data from spoken commands.
 
+**[NOTE] Only Python version above 3.4 and below or equal to 3.8 is supported currently. Make sure to select the correct interpreter.**
+
 ## Installation and Setup
 1. **Install Rasa**:
    ```bash
